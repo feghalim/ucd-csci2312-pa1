@@ -15,6 +15,8 @@ using Testing::ErrorContext;
 
 #define DESC(x) desc(x, __LINE__)  // ugly hack, but saves some time
 
+double computeArea(Point &, Point &, Point &);
+
 // smoke test
 void test_point_smoketest(ErrorContext &ec) {
     bool pass;
@@ -23,7 +25,7 @@ void test_point_smoketest(ErrorContext &ec) {
 
     ec.DESC("constructor, dimensionality, destructor");
     pass = true;
-    for (int i = 0; i < 10; i ++) {
+    for (int i = 0; i < 10; i++) {
 
         // Construct a Point
         // At the end of the block, destructor will be called
@@ -37,7 +39,7 @@ void test_point_smoketest(ErrorContext &ec) {
 
     ec.DESC("constructor, large values");
     pass = true;
-    for (int i = 0; i < 10; i ++) {
+    for (int i = 0; i < 10; i++) {
 
         // Construct a Point
         // At the end of the block, destructor will be called
@@ -73,7 +75,9 @@ void test_point_getset(ErrorContext &ec, unsigned int numRuns) {
         {
             Point p;
 
-            p.setX(6.5); p.setY(5.67); p.setZ(4.63);
+            p.setX(6.5);
+            p.setY(5.67);
+            p.setZ(4.63);
 
             pass = (p.getX() == 6.5 && p.getY() == 5.67 && p.getZ() == 4.63);
 
@@ -84,7 +88,9 @@ void test_point_getset(ErrorContext &ec, unsigned int numRuns) {
         {
             Point p(10, 14, 23);
 
-            p.setX(6.5); p.setY(5.67); p.setZ(4.63);
+            p.setX(6.5);
+            p.setY(5.67);
+            p.setZ(4.63);
 
             pass = (p.getX() == 6.5 && p.getY() == 5.67 && p.getZ() == 4.63);
 

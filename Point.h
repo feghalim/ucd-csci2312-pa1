@@ -1,27 +1,36 @@
-// A 2-dimensional point class!
+// A 3-dimensional point class!
 // Coordinates are double-precision floating point.
 
-#ifndef __POINT_H
-#define __POINT_H
+#ifndef __point_h
+#define __point_h
 
 class Point {
-    
+
 private:
-    double x, y;
+    double x;
+    double y;
+    double z;
 
 public:
     // Constructors
     Point();                      // default constructor
-    Point(double x, double y);    // two-argument constructor
+    Point(double x, double y, double z);    // two-argument constructor
+
+    // Destructor
+    ~Point();
 
     // Mutator methods
     void setX(double newX);
     void setY(double newY);
+    void setZ(double newZ);
+
+    double distanceTo(Point&);
+
 
     // Accessor methods
-    double getX() const;
-    double getY() const;
-    
+    double getX(){return x;}
+    double getY(){return y;}
+    double getZ(){return z;}
 };
 
-#endif // __POINT_H
+#endif // __point_h
