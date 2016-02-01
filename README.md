@@ -12,15 +12,15 @@ tested using cygwin64 terminal emulator. It executed succesfully in both
 scenarios.
 
 ### Files included:
-    ..* main.cpp
-    ..* ErrorContext.cpp
-    ..* ErrorContext.h
-    ..* area.cpp
-    ..* Point.cpp
-    ..* Point.h
-    ..* PointTests.h
-    ..* PointTests.cpp
-    ..* Readme.md
+    main.cpp
+    ErrorContext.cpp
+    ErrorContext.h
+    area.cpp
+    Point.cpp
+    Point.h
+    PointTests.h
+    PointTests.cpp
+    Readme.md
 
 ### Main file functions
 
